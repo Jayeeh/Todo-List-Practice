@@ -1,5 +1,5 @@
 // This line says we want to use a special helper called "Injectable" from a library called "@nestjs/common".
-// THis of it like a special power that helps our code work better.
+// Think of it like a special power that helps our code work better.
 import { Injectable } from '@nestjs/common';
 
 // This line says we want to use another special helper called "InjectModel" from a library called "@nestjs/mongoose".
@@ -10,7 +10,7 @@ import { InjectModel } from '@nestjs/mongoose';
 // Think of it like a blueprint for our database
 import { Model } from 'mongoose';
 
-// This line sayas we want to use some special types called "Todo" and "TodoDocument" from a file called "todo.model".
+// This line says we want to use some special types called "Todo" and "TodoDocument" from a file called "todo.model".
 // These types help us understand what our todo list items look like.
 import { Todo, TodoDocument } from './todo.model';
 
@@ -50,7 +50,6 @@ export class TodoService {
             // THis line says we're trying to find one todo item in our database by its ID.
             // We're using the "findById" method to look for the item, and "lean" to make the data smaller.
             const todo = await this.todoModel.findById(id).lean().exec();
-            // This line says if something goes wrong, we're throwing a new error with a message.
             return todo;
         } catch (error) {
             // This line says if something goes wrong, we're throwing a new error with a message.
